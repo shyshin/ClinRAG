@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 205 45% 98%;
+    --foreground: 210 44% 17%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 44% 17%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 44% 17%;
+    --primary: 206 72% 44%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 204 43% 94%;
+    --secondary-foreground: 209 39% 32%;
+    --muted: 205 32% 95%;
+    --muted-foreground: 212 16% 43%;
+    --accent: 203 70% 92%;
+    --accent-foreground: 210 44% 20%;
+    --border: 205 27% 86%;
+    --input: 205 23% 83%;
+    --ring: 206 72% 44%;
+    --success: 146 44% 43%;
+    --warning: 42 85% 68%;
+    --info: 205 76% 54%;
+    --radius: 1.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply min-h-screen bg-background bg-mesh font-sans text-foreground antialiased;
+    font-family: "Manrope", "Avenir Next", "Segoe UI", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply text-balance;
+    font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  }
+
+  p {
+    @apply text-pretty;
+  }
+}
+
+@layer utilities {
+  .surface-outline {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  }
+}
